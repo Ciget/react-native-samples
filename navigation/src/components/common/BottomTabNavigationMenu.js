@@ -5,30 +5,30 @@ export class BottomTabNavigationMenu extends Component{
     constructor(){
         super();
         this.state = {
-            selectedTab: 'tabFavorites'
+            selectedTab: 'tabDownloads'
         };
     }
     render(){
         return (
             <TabBarIOS>
-                <TabBarIOS.Item
-                systemIcon="favorites"
-                selected={this.state.selectedTab === 'tabFavorites'}
-                onPress={() => this.setTab('tabFavorites')}>
-                <TabFavorites/>
-                </TabBarIOS.Item>
-        
-                <TabBarIOS.Item
-                systemIcon="downloads"
+               <TabBarIOS.Item
+                title="Cities"
                 selected={this.state.selectedTab === 'tabDownloads'}
-                onPress={() => this.setTab('tabDownloads')}>
+                onPress={() => this.setState({selectedTab: 'tabDownloads'})}>
                 <TabDownloads/>
+                </TabBarIOS.Item>
+
+                <TabBarIOS.Item
+                title="My trips"
+                selected={this.state.selectedTab === 'tabFavorites'}
+                onPress={() => this.setState({selectedTab: 'tabFavorites'})}>
+                <TabFavorites/>
                 </TabBarIOS.Item>
         
                 <TabBarIOS.Item
                 systemIcon="more"
                 selected={this.state.selectedTab === 'tabMore'}
-                onPress={() => this.setTab('tabMore')}>
+                onPress={() => this.setState({selectedTab: 'tabMore'})}>
                 <TabMore/>
                 </TabBarIOS.Item>
             </TabBarIOS>

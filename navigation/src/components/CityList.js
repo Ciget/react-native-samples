@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {View, Text, FlatList, StyleSheet} from 'react-native';
 import {CityItemPreview } from './CityItemPreview';
-import {BottomTabNavigationMenu} from './common/TabMenu';
+import {BottomTabNavigationMenu} from './common/BottomTabNavigationMenu';
 
 export class CityList extends Component{
     componentWillMount(){
