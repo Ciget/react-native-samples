@@ -3,9 +3,11 @@ import {
     MARK_DONE
 } from './types';
 
+let nextTodoId = 0
+
 export const addItem = (text)=>{
     return {
-        id: 0,
+        id: nextTodoId++,
         title: text,
         type: ADD_ITEM
     };

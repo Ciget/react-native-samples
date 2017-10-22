@@ -10,6 +10,9 @@ export const ToDoReducers = (state = [], action)=>{
                     title: action.title,
                     isCompleted: false
                 }];
+        case ActionTypes.MARK_DONE: 
+        console.log('done');
+                return state.map(todo=>todo.id == action.id?{...todo, isCompleted:true}:todo);
         default: 
             return state;
     }

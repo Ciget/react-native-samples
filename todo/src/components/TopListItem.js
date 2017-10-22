@@ -23,9 +23,9 @@ class TopListItem extends Component{
 
     addNewItem(){
         this.props.addItem(this.state.title);
-        this.setState({
-            title: ''
-        });
+        // this.setState({
+        //     title: ''
+        // });
     }
 
     render(){

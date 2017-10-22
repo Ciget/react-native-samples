@@ -15,14 +15,19 @@ class ToDoList extends Component{
         }
     }
 
-
+    _keyExtractor(item, index){
+        console.log(item);
+        return item.id;
+    }
     render(){
         const {todos} = this.props;
+       // console.log(todos);
         return (<View>
                     <TopListItem />
                     <FlatList 
                         data={todos}
-                        renderItem={ ({item})=> <ToDoItem item={item} />}
+                        renderItem={ ({item})=> <ToDoItem item={item} 
+                        keyExtractor={this._keyExtractor}/>}
                     />
             </View>);
     }

@@ -7,10 +7,21 @@ import {connect} from 'react-redux';
 class ToDoItem extends Component{
     render()
     {
-        const {title} = this.props.item;
+        const {title, isCompleted} = this.props.item;
         
-        return (<View>
-                    <Button onPress={()=>this.props.markAsDone(this.props.item)}>{title}</Button>
+        return (<View style={styles.item}>
+                    <Button 
+                        style={ isCompleted && {
+                            display: 'none'
+                        }}
+                        onPress={
+                        ()=>this.props.markAsDone(this.props.item)}
+                        >Done</Button>
+                        <Text
+                            style={isCompleted && {
+                                textDecorationLine: 'line-through'
+                            }}
+                        >{title}</Text>
                 </View>);
     }
 }
@@ -30,5 +41,9 @@ const styles = StyleSheet.create({
         borderColor: 'gray', 
         width:200,
         borderWidth: 1
+    },
+    item:{
+        flex:1,
+        flexDirection: 'row'
     }
 });
