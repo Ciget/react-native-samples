@@ -1,5 +1,5 @@
 {
-  "name": "todo",
+  "name": "file-system",
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
@@ -19,8 +19,9 @@
     "preset": "jest-expo"
   },
   "dependencies": {
-    "expo": "^22.0.0",
+    "expo": "^21.0.3",
     "react": "16.0.0",
-    "react-native": "^0.49.3"
+    "react-native": "^0.49.3",
+    "react-native-fs": "^2.8.1"
   }
 }
