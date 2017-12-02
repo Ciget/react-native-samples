@@ -1,1 +1,0 @@
-export const SHOW_CITY_LIST = 'ShowCityList';
