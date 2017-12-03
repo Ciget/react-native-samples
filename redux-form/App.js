@@ -1,13 +1,19 @@
 import React, { Component } from "react";
-import { StyleSheet, Text, View } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Alert,
+} from "react-native";
 import store from "./src/redux/store";
-import MyForm from "./src/components/myForm";
+import MyComponent from "./src/MyComponent";
+import { Provider } from 'react-redux';
 
-export class App extends Component {
+export default class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <MyForm
+        <MyComponent
           onSubmit={values =>
             Alert.alert('Submitted!', JSON.stringify(values))}
         />
