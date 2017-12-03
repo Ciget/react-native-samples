@@ -1,0 +1,22 @@
+{
+  "expo": {
+    "name": "fb",
+    "description": "An empty new project",
+    "slug": "fb",
+    "privacy": "public",
+    "sdkVersion": "23.0.0",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "primaryColor": "#cccccc",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "facebookScheme": "fb134145290559058"
+  }
+}

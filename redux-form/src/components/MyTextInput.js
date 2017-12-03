@@ -13,7 +13,6 @@ export default function MyTextInput(props) {
   const validationStyles = meta.touched && !meta.active
     ? meta.valid ? styles.valid : styles.invalid
     : null;
-
   return (
     <View style={[styles.inputContainer, validationStyles]}>
       <TextInput
@@ -24,6 +23,7 @@ export default function MyTextInput(props) {
         value={input.value}
         style={styles.input}
       />
+      {meta.touched && meta.error?<Text>{meta.error}</Text>:null}
     </View>
   );
 }
